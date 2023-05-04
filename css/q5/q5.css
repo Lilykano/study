@@ -1,0 +1,29 @@
+#main {
+    display: flex;
+    height: 100px;
+    background: linear-gradient(to right bottom, yellow, white);
+}
+
+#a {
+    display: flex;
+    background-color: red;
+    width: 200px;
+}
+#b {
+    background-color: orange;
+    width: 200px;
+}
+#c {
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+}
+#d {
+    background-color: green;    
+    width: 200px;
+}
+#e {
+    background-color: blue;
+    width: 200px;
+}
+
