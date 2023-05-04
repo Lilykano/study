@@ -26,5 +26,5 @@ input:focus{
 }
 
 div>p:target {
-    background-color: blue;
+    background-color: gray;
 }
