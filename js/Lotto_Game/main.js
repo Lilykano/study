@@ -18,8 +18,8 @@ document.write(Lotto_Number[0]);
 document.write(",");
 //중복예외처리
 while(true){
-    if(Lotto_Number[1] != Lotto_Number[0]){   // 같지 않으면 빠져나감
-        
+    //2번째 번호랑 1번째 번호가 다를시 빠져나감
+    if(Lotto_Number[1] != Lotto_Number[0]){   
         document.write(Lotto_Number[1]);
         document.write(",");
         break;
@@ -27,10 +27,10 @@ while(true){
     else{
         Lotto_Number[1]=Math.floor(Math.random() *45 +1);
     }
-
 }
 
 while(true){
+    //3번째번호
     if(Lotto_Number[2] != Lotto_Number[1] && Lotto_Number[2] != Lotto_Number[0]){
         document.write(Lotto_Number[2]);
         document.write(",");
@@ -42,6 +42,7 @@ while(true){
 }
 
 while(true){
+    //4번째번호
     if(Lotto_Number[3] != Lotto_Number[2] && Lotto_Number[3] != Lotto_Number[1] && Lotto_Number[3] != Lotto_Number[0]){
         document.write(Lotto_Number[3]);
         document.write(",");
@@ -53,6 +54,7 @@ while(true){
 }
 
 while(true){
+    //5번째번호
     if(Lotto_Number[4] != Lotto_Number[3] && Lotto_Number[4] != Lotto_Number[2] && Lotto_Number[4] != Lotto_Number[1] && Lotto_Number[4] != Lotto_Number[0]){
         document.write(Lotto_Number[4]);
         document.write(",");
@@ -64,6 +66,7 @@ while(true){
 }
 
 while(true){
+    //6번째번호
     if(Lotto_Number[5] != Lotto_Number[4] && Lotto_Number[5] != Lotto_Number[3] && Lotto_Number[5] != Lotto_Number[2] && Lotto_Number[5] != Lotto_Number[1] && Lotto_Number[5] != Lotto_Number[0]){
         document.write(Lotto_Number[5]);
         break;
@@ -74,6 +77,7 @@ while(true){
 }
 
 while(true){
+    //보너스번호
     if(Lotto_Number[6] != Lotto_Number[5] && Lotto_Number[6] != Lotto_Number[4] && Lotto_Number[6] != Lotto_Number[3] && Lotto_Number[6] != Lotto_Number[2] && Lotto_Number[6] != Lotto_Number[1] && Lotto_Number[6] != Lotto_Number[0]){
         document.write(" 보너스번호:",Lotto_Number[6]);
         break;
@@ -84,7 +88,6 @@ while(true){
 }
 document.write("입니다.");
 document.write("<br>");
-
 document.write("당신의 번호는 : ", My_Lotto," 보너스번호:",My_bonus, "입니다.");
 //일치갯수 확인1
 if (My_Lotto[0] == Lotto_Number[0]) {
@@ -203,7 +206,7 @@ if (My_Lotto[5] == Lotto_Number[5]) {
 document.write("<br>");
 document.write("일치하는 갯수 :", win);
 document.write("<br>");
-
+//일치 갯수에 따른 당첨 확인
 if(win<=2){
     document.write("꽝입니다");
 }
@@ -213,10 +216,7 @@ if(win==3){
 if(win==4){
     document.write("4등 입니다");
 }
-// if(win==5){
-//     document.write("3등 입니다");
-// }
-//5개를 맞추고 틀린 한 번호가 보너스 번호와 일치하면 2등임 <<< 2등 규칙.
+//5개를 맞추고 틀린 한 번호가 보너스 번호와 일치하면 2등 <<< 2등 규칙.
 if(win==5){
     for(i=0; i<=5; i++){
         if(My_bonus==Lotto_Number[i]){
